@@ -6,15 +6,21 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "dependencies": {
     "vue": "^3.4.21"
   },
   "devDependencies": {
+    "@codecov/vite-plugin": "0.0.1-beta.5",
+    "@types/node": "^20.11.30",
     "@vitejs/plugin-vue": "^5.0.4",
+    "@vitest/coverage-v8": "^1.4.0",
     "typescript": "^5.2.2",
     "vite": "^5.2.0",
+    "vitest": "^1.4.0",
     "vue-tsc": "^2.0.6"
   }
 }
