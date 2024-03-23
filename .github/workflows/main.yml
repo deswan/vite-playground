@@ -14,8 +14,10 @@ jobs:
           version: 8
       - name: Install dependencies
         run: pnpm install
+      - name: Run build
+        run:  CODECOV_TOKEN=${{ secrets.CODECOV_TOKEN }} pnpm build
       - name: Run tests and collect coverage
-        run: pnpm test
+        run:  pnpm coverage
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v4.0.1
         with:
