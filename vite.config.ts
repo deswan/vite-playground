@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vitest/config'
 import vue from '@vitejs/plugin-vue'
 import { codecovVitePlugin } from "@codecov/vite-plugin";
 
@@ -9,4 +9,9 @@ export default defineConfig({
     bundleName: "vite-playground",
     uploadToken: process.env.CODECOV_TOKEN,
   }),],
+  test: {
+    coverage: {
+      reporter: ['text', 'json'],
+    },
+  },
 })
